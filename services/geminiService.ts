@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 import { Shot, Storyboard, GenerationOptions, BranchSpecificOptions, FocalLength, FacialExpression } from "../types";
 
@@ -120,9 +121,9 @@ const generateBranchShot = async (
   let consistencyInstruction = `如果故事片段与之前的故事梗概相关，请尝试保持角色和场景描述的一致性。`;
 
   if (branchOptions.consistencyOption === 'character_animal') {
-    consistencyInstruction = `请确保角色和动物特征（锚点）与主故事分镜中定义的保持绝对一致。例如，如果角色是“一位留着长棕色头发、穿着蓝色毛衣的年轻女子”，那么在她出现的每个文生图提示词中都使用这个精确短语。`;
+    consistencyInstruction = `请确保人物、动物、服饰、物品等特征（锚点）与主故事分镜中定义的保持绝对一致。例如，如果角色是“一位留着长棕色头发、穿着蓝色毛衣的年轻女子”，那么在她出现的每个文生图提示词中都使用这个精确短语。`;
   } else if (branchOptions.consistencyOption === 'scene_landscape') {
-    consistencyInstruction = `请确保场景和景物特征（锚点）与主故事分镜中定义的保持绝对一致。例如，如果场景是“一个带壁炉的舒适客厅”，则使用这个精确短语。`;
+    consistencyInstruction = `请确保场景、景物、物品等特征（锚点）与主故事分镜中定义的保持绝对一致。例如，如果场景是“一个带壁炉的舒适客厅”，则使用这个精确短语。`;
   }
 
 

@@ -140,8 +140,8 @@ const StoryboardDisplay: React.FC<StoryboardDisplayProps> = ({ storyboard, onBra
                     onChange={(e) => setConsistencyOption(e.target.value as ConsistencyOption | '')}
                   >
                     <option value="">不指定</option>
-                    <option value="character_animal">人物、动物特征保持一致性</option>
-                    <option value="scene_landscape">场景、景物特征保持一致性</option>
+                    <option value="character_animal">人物、动物、服饰、物品等特征保持一致性</option>
+                    <option value="scene_landscape">场景、景物、物品等特征保持一致性</option>
                   </select>
                 </div>
 
@@ -176,8 +176,8 @@ const StoryboardDisplay: React.FC<StoryboardDisplayProps> = ({ storyboard, onBra
                     {branchShotData.options.consistencyOption === undefined
                       ? '不指定'
                       : branchShotData.options.consistencyOption === 'character_animal'
-                        ? '人物、动物特征'
-                        : '场景、景物特征'
+                        ? '人物、动物、服饰、物品等特征'
+                        : '场景、景物、物品等特征'
                     }
                   </p>
 
