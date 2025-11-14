@@ -1,0 +1,5 @@
+{
+  "name": "分镜脚本生成器",
+  "description": "根据故事梗概生成分镜脚本，包含文生图和图生视频提示词，确保视觉一致性和逻辑流畅性。",
+  "requestFramePermissions": []
+}
